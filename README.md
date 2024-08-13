@@ -1,18 +1,3 @@
-# AWS Well-Architected Mod for Powerpipe
-
-> [!IMPORTANT]  
-> [Powerpipe](https://powerpipe.io) is now the preferred way to run this mod! [Migrating from Steampipe →](https://powerpipe.io/blog/migrating-from-steampipe)
->
-> All v0.x versions of this mod will work in both Steampipe and Powerpipe, but v1.0.0 onwards will be in Powerpipe format only.
-
-200+ checks covering AWS Well-Architected Framework defined best practices across all AWS regions.
-
-Run checks in a dashboard:
-![image](https://raw.githubusercontent.com/turbot/steampipe-mod-aws-well-architected/main/docs/aws_well_architected_reliability_dashboard.png)
-
-Or in a terminal:
-![image](https://raw.githubusercontent.com/turbot/steampipe-mod-aws-well-architected/main/docs/aws_well_architected_console.png)
-
 ## Getting Started
 
 ### Installation
@@ -38,7 +23,8 @@ Finally, install the mod:
 mkdir dashboards
 cd dashboards
 powerpipe mod init
-powerpipe mod install github.com/turbot/steampipe-mod-aws-well-architected
+git clone git@github.com:anandapteversent/well_architected_framework.git
+powerpipe mod install
 ```
 
 ### Browsing Dashboards
@@ -119,26 +105,6 @@ export PP_VAR_common_dimensions='["account_id", "connection_name", "region"]'
 export PP_VAR_tag_dimensions='["Environment", "Owner"]'
 powerpipe benchmark run well_architected_framework_security
 ```
-
-## Open Source & Contributing
-
-This repository is published under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0). Please see our [code of conduct](https://github.com/turbot/.github/blob/main/CODE_OF_CONDUCT.md). We look forward to collaborating with you!
-
-[Steampipe](https://steampipe.io) and [Powerpipe](https://powerpipe.io) are products produced from this open source software, exclusively by [Turbot HQ, Inc](https://turbot.com). They are distributed under our commercial terms. Others are allowed to make their own distribution of the software, but cannot use any of the Turbot trademarks, cloud services, etc. You can learn more in our [Open Source FAQ](https://turbot.com/open-source).
-
-## Get Involved
-
-**[Join #powerpipe on Slack →](https://turbot.com/community/join)**
-
-Want to help but don't know where to start? Pick up one of the `help wanted` issues:
-
-- [Powerpipe](https://github.com/turbot/powerpipe/labels/help%20wanted)
-- [AWS Well-Architected Mod](https://github.com/turbot/steampipe-mod-aws-well-architected/labels/help%20wanted)
-
-## Credits
-
-- Thanks to [@JPPienaar](https://github.com/JPPienaar) and [@nathanwebsterdotme](https://github.com/nathanwebsterdotme) from [Daemon](https://github.com/Daemon-Solutions) for developing some of the control mappings used in the Well-Architected Framework benchmarks.
-
 
 Commands - 
 
